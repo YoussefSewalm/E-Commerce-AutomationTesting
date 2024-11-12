@@ -25,11 +25,11 @@ public class ContactUsTest extends TestBase{
 	{
 		homepage=new HomePage(driver);
 		contact_us=homepage.ClickingContactUs();
-        contact_us.VerifyingContactUsPage();
-        contact_us.FillingContactUsInfo(contactusname, ContactUsEmail, ContactUsSubject, message);
+                contact_us.VerifyingContactUsPage();
+                contact_us.FillingContactUsInfo(contactusname, ContactUsEmail, ContactUsSubject, message);
 		contact_us.ClickingSubmitContactUs();
-        contact_us.VerifyingSuccessfulContacting();
-	    homepage.ClickingHomePage();
+                contact_us.VerifyingSuccessfulContacting();
+	        homepage.ClickingHomePage();
 	}
 
 }
