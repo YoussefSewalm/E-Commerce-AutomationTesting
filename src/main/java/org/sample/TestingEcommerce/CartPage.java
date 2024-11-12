@@ -17,11 +17,6 @@ public class CartPage extends Utility{
 		// TODO Auto-generated constructor stub
 	}
 
-	//tr[id="product-2"]>td[class="cart_quantity"] -------to check quanity number
-	//ol[class="breadcrumb"]>li[class="active"].getText -----to check Text"Shopping Cart" to verify going to cart page
-	//td[class="cart_total"]>p.getText-----to Verify Total Price
-	//td[class="cart_price"]>p.getText-----to Verify Each Price
-	//h4[class="modal-title w-100"]-----to Verify ProceedToCheckout Works correctly
 	private By ProceedToCheckoutButton=By.cssSelector("div[class=\"col-sm-6\"]>a[class=\"btn btn-default check_out\"]");
 	private By RegisterOrLoginAfterCheckOutButton=By.cssSelector("p[class=\"text-center\"]>a[href=\"/login\"]");
 	private By ContinueOnCartButton=By.cssSelector("div[class=\"modal-footer\"]>button");
