@@ -11,9 +11,9 @@ public class HomePageTest extends TestBase {
 	@Test
 	public void VerifySubscriptionInHomePage()
 	{
-		homepage=new HomePage(driver);
-        homepage.EnterSubscriptionEmail("7amada20@gmail.com");
-        homepage.ClickingSubscribeButton();
+	    homepage=new HomePage(driver);
+            homepage.EnterSubscriptionEmail("7amada20@gmail.com");
+            homepage.ClickingSubscribeButton();
 	}
 	
 }
