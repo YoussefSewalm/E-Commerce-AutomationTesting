@@ -22,13 +22,13 @@ public class ValidLogInAndLogOutTest extends TestBase {
 	{
 		homepage=new HomePage(driver);
 		registerloginpage=homepage.ClickingOnRegister();
-	    registerloginpage.VerifyingRegLoginPage();
+	        registerloginpage.VerifyingRegLoginPage();
 		registerloginpage.ClearingLoginEmailText();
 		registerloginpage.ClearingLoginPasswordText();
 		registerloginpage.EnterLoginEmail(loginemail);
 		registerloginpage.EnterPassword(pw);
 		registerloginpage.ClickLoginButton();
-        registerloginpage.VerifyingSuccessfulLogin();
+                registerloginpage.VerifyingSuccessfulLogin();
 		homepage.ClickingHomePage();
 		homepage.ClickingLogOut();
 	}
