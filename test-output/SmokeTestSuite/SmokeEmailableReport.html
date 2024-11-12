@@ -1,0 +1,164 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>17/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Nov 11 06:08:17 EET 2024</td>
+</tr>
+<tr><td>Total time:</td><td>179 seconds (179602 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.sample.TestingEcommerce.CartPageTest.PlaceOrderRegisterBeforeCheckout()'><b>PlaceOrderRegisterBeforeCheckout</b><br>Test class: org.sample.TestingEcommerce.CartPageTest<br>Parameters: youssef1234, 7amada126@gmail.com, youssef1234, 12345678, 10, January, 1999, CheckNews, CheckOffers, youssef, sewalm, Vodoo, Street4,Mokattam, , United States, Cairo, Mokattam, 11111, 01023847586, youssef, 1234, 345, 1, 2028</td>
+<td></td>
+<td>24</td>
+<td>org.sample.TestingEcommerce.CartPageTest@508dec2b</td></tr>
+<tr>
+<td title='org.sample.TestingEcommerce.CartPageTest.DownloadInvoiceAfterPurchase()'><b>DownloadInvoiceAfterPurchase</b><br>Test class: org.sample.TestingEcommerce.CartPageTest<br>Parameters: youssef1234, 7amada127@gmail.com, youssef1234, 12345678, 10, January, 1999, CheckNews, CheckOffers, youssef, sewalm, Vodoo, Street4,Mokattam, , United States, Cairo, Mokattam, 11111, 01023847586, youssef, 1234, 345, 1, 2028</td>
+<td></td>
+<td>27</td>
+<td>org.sample.TestingEcommerce.CartPageTest@508dec2b</td></tr>
+<tr>
+<td title='org.sample.TestingEcommerce.CartPageTest.AddProductsInCart()'><b>AddProductsInCart</b><br>Test class: org.sample.TestingEcommerce.CartPageTest</td>
+<td></td>
+<td>6</td>
+<td>org.sample.TestingEcommerce.CartPageTest@508dec2b</td></tr>
+<tr>
+<td title='org.sample.TestingEcommerce.HomePageTest.VerifySubscriptionInHomePage()'><b>VerifySubscriptionInHomePage</b><br>Test class: org.sample.TestingEcommerce.HomePageTest</td>
+<td></td>
+<td>0</td>
+<td>org.sample.TestingEcommerce.HomePageTest@14bdbc74</td></tr>
+<tr>
+<td title='org.sample.TestingEcommerce.ValidRegisterWithNewEmail.RegisterUserWithNewEmail()'><b>RegisterUserWithNewEmail</b><br>Test class: org.sample.TestingEcommerce.ValidRegisterWithNewEmail<br>Parameters: youssef1234, w4rior44309@gmail.com</td>
+<td></td>
+<td>2</td>
+<td>org.sample.TestingEcommerce.ValidRegisterWithNewEmail@38145825</td></tr>
+<tr>
+<td title='org.sample.TestingEcommerce.TestCasesPageTest.VerifyTestCasesPage()'><b>VerifyTestCasesPage</b><br>Test class: org.sample.TestingEcommerce.TestCasesPageTest</td>
+<td></td>
+<td>3</td>
+<td>org.sample.TestingEcommerce.TestCasesPageTest@12591ac8</td></tr>
+<tr>
+<td title='org.sample.TestingEcommerce.CartPageTest.PlaceOrderLoginBeforeCheckout()'><b>PlaceOrderLoginBeforeCheckout</b><br>Test class: org.sample.TestingEcommerce.CartPageTest<br>Parameters: w4rior44300@gmail.com, 12345678, youssef, 1234, 345, 1, 2028</td>
+<td></td>
+<td>22</td>
+<td>org.sample.TestingEcommerce.CartPageTest@508dec2b</td></tr>
+<tr>
+<td title='org.sample.TestingEcommerce.ContactUsTest.ContactUsForm()'><b>ContactUsForm</b><br>Test class: org.sample.TestingEcommerce.ContactUsTest<br>Parameters: ahmed, ahmed10@gmail.com, Product, abdg aheyaehae</td>
+<td></td>
+<td>4</td>
+<td>org.sample.TestingEcommerce.ContactUsTest@14dd7b39</td></tr>
+<tr>
+<td title='org.sample.TestingEcommerce.AllProductsPageTest.VerifyingProductDetailsPage()'><b>VerifyingProductDetailsPage</b><br>Test class: org.sample.TestingEcommerce.AllProductsPageTest</td>
+<td></td>
+<td>4</td>
+<td>org.sample.TestingEcommerce.AllProductsPageTest@24c1b2d2</td></tr>
+<tr>
+<td title='org.sample.TestingEcommerce.CartPageTest.VerifySubscriptionInCartPage()'><b>VerifySubscriptionInCartPage</b><br>Test class: org.sample.TestingEcommerce.CartPageTest</td>
+<td></td>
+<td>1</td>
+<td>org.sample.TestingEcommerce.CartPageTest@508dec2b</td></tr>
+<tr>
+<td title='org.sample.TestingEcommerce.ValidLogInAndLogOutTest.ValidLoginAndLogout()'><b>ValidLoginAndLogout</b><br>Test class: org.sample.TestingEcommerce.ValidLogInAndLogOutTest<br>Parameters: w4rior44300@gmail.com, 12345678</td>
+<td></td>
+<td>10</td>
+<td>org.sample.TestingEcommerce.ValidLogInAndLogOutTest@5a7fe64f</td></tr>
+<tr>
+<td title='org.sample.TestingEcommerce.AllProductsPageTest.SearchProduct()'><b>SearchProduct</b><br>Test class: org.sample.TestingEcommerce.AllProductsPageTest</td>
+<td></td>
+<td>6</td>
+<td>org.sample.TestingEcommerce.AllProductsPageTest@24c1b2d2</td></tr>
+<tr>
+<td title='org.sample.TestingEcommerce.CartPageTest.PlaceOrderRegisterwhileCheckout()'><b>PlaceOrderRegisterwhileCheckout</b><br>Test class: org.sample.TestingEcommerce.CartPageTest<br>Parameters: youssef1234, 7amada125@gmail.com, youssef1234, 12345678, 10, January, 1999, CheckNews, CheckOffers, youssef, sewalm, Vodoo, Street4,Mokattam, , United States, Cairo, Mokattam, 11111, 01023847586, youssef, 1234, 345, 1, 2028</td>
+<td></td>
+<td>24</td>
+<td>org.sample.TestingEcommerce.CartPageTest@508dec2b</td></tr>
+<tr>
+<td title='org.sample.TestingEcommerce.ProductDetailsTest.AddReviewOnProduct()'><b>AddReviewOnProduct</b><br>Test class: org.sample.TestingEcommerce.ProductDetailsTest<br>Parameters: Ahmed20, Ahmed30@gmail.com, ajrwhrhwea</td>
+<td></td>
+<td>4</td>
+<td>org.sample.TestingEcommerce.ProductDetailsTest@7dc19a70</td></tr>
+<tr>
+<td title='org.sample.TestingEcommerce.RegisterThenLoginTest.RegisterUser()'><b>RegisterUser</b><br>Test class: org.sample.TestingEcommerce.RegisterThenLoginTest<br>Parameters: youssef1234, 7amada300@gmail.com, youssef1234, 12345678, 10, January, 1999, CheckNews, CheckOffers, youssef, sewalm, Vodoo, Street4,Mokattam, , United States, Cairo, Mokattam, 11111, 01023847586</td>
+<td></td>
+<td>10</td>
+<td>org.sample.TestingEcommerce.RegisterThenLoginTest@3e0e1046</td></tr>
+<tr>
+<td title='org.sample.TestingEcommerce.RegisterThenLoginTest.LoginUserWithCorrectEmailAndPassword()'><b>LoginUserWithCorrectEmailAndPassword</b><br>Test class: org.sample.TestingEcommerce.RegisterThenLoginTest<br>Parameters: 7amada300@gmail.com, 12345678</td>
+<td></td>
+<td>11</td>
+<td>org.sample.TestingEcommerce.RegisterThenLoginTest@3e0e1046</td></tr>
+<tr>
+<td title='org.sample.TestingEcommerce.AllProductsPageTest.VerifyingAllProductsPage()'><b>VerifyingAllProductsPage</b><br>Test class: org.sample.TestingEcommerce.AllProductsPageTest</td>
+<td></td>
+<td>3</td>
+<td>org.sample.TestingEcommerce.AllProductsPageTest@24c1b2d2</td></tr>
+</table><p>
+</body>
+</html>
