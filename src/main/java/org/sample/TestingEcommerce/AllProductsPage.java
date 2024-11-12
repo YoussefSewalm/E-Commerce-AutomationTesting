@@ -26,7 +26,6 @@ public class AllProductsPage extends Utility {
   private By ViewCartButton=By.cssSelector("p[class=\"text-center\"]>a");
   private By RemoveFirstItem=By.xpath("/html/body/section/div/div[2]/table/tbody/tr[1]/td[6]/a");
   private By RemoveSecondItem=By.xpath("/html/body/section/div/div[2]/table/tbody/tr[2]/td[6]/a");
-//tr[@id="product-1"]/td[@class="cart_delete"]/a
   private WebElement ViewProductButtonElement;
   private WebElement AddToCartButtonFirstProductElement;
   private WebElement EnterProductSearchElement;
