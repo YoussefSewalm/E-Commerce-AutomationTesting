@@ -28,14 +28,14 @@ public class RegisterThenLoginTest extends TestBase {
 	{
 		homepage=new HomePage(driver);
 		registerloginpage=homepage.ClickingOnRegister();
-        registerloginpage.FillingInitialSignUpInfo(initialname, email);
+                registerloginpage.FillingInitialSignUpInfo(initialname, email);
 		registerpage=registerloginpage.ClickRegisterButton();
-	    registerpage.FillingRegisterInfo(regname, pw, day, month, year, checknews, checkoffers, firstname, lastname, company, address1, address2, country, state, city, zipcode, mobilenumber);
+	        registerpage.FillingRegisterInfo(regname, pw, day, month, year, checknews, checkoffers, firstname, lastname, company, address1, address2, country, state, city, zipcode, mobilenumber);
 		registerpage.ClickOnCreateAccount();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-	    registerpage.VerifyingAccountCreated();
+	        registerpage.VerifyingAccountCreated();
 		registerpage.ClickingOnContiniueAfterCreatingAccount();
-        registerpage.VerifyingLoggedInAfterReg();
+                registerpage.VerifyingLoggedInAfterReg();
 		homepage=new HomePage(driver);
 		homepage.ClickingHomePage();
 	}
@@ -57,7 +57,7 @@ public class RegisterThenLoginTest extends TestBase {
 		registerloginpage.FillingLoginInfo(loginemail, password);
 		registerloginpage.ClickLoginButton();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-        registerloginpage.VerifyingSuccessfulLogin();
+                registerloginpage.VerifyingSuccessfulLogin();
 		homepage.DeleteAccount();
 		homepage.ClickingContinue();
 	}
