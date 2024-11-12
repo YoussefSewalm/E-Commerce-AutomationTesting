@@ -21,10 +21,10 @@ public class InvalidLoginTest extends TestBase{
 	{
 		homepage=new HomePage(driver);
 		registerloginpage=homepage.ClickingOnRegister();
-        registerloginpage.VerifyingRegLoginPage();
+                registerloginpage.VerifyingRegLoginPage();
 		registerloginpage.EnterLoginEmail(loginemail);
 		registerloginpage.EnterPassword(pw);
 		registerloginpage.ClickLoginButton();
-        registerloginpage.VerifyingUnSuccessfulLogin();
+                registerloginpage.VerifyingUnSuccessfulLogin();
 	}
 }
