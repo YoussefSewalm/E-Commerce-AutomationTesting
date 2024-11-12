@@ -21,10 +21,10 @@ public class InvalidRegisterWithAlreadyRegEmail extends TestBase{
 	{
 		homepage=new HomePage(driver);
 		registerloginpage=homepage.ClickingOnRegister();
-	    registerloginpage.VerifyingRegLoginPage();
-        registerloginpage.FillingInitialSignUpInfo(name, signupemail);
+	        registerloginpage.VerifyingRegLoginPage();
+                registerloginpage.FillingInitialSignUpInfo(name, signupemail);
 		registerloginpage.ClickRegisterButton();
-        registerloginpage.VerifyingUnSuccessfulSignUp();
+                registerloginpage.VerifyingUnSuccessfulSignUp();
 		registerloginpage.ClearingSignUpEmailText();
 		registerloginpage.ClearingSignUpNameText();
 	}
