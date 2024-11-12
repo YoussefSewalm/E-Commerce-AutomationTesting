@@ -28,8 +28,8 @@ public class ValidRegisterWithNewEmail extends TestBase {
 	{
 		homepage=new HomePage(driver);
 		registerloginpage=homepage.ClickingOnRegister();
-        registerloginpage.FillingInitialSignUpInfo(name, signupemail);
+                registerloginpage.FillingInitialSignUpInfo(name, signupemail);
 		registerloginpage.ClickRegisterButton();
-        registerloginpage.VerifyingSuccessfulInitialSignUp();
+                registerloginpage.VerifyingSuccessfulInitialSignUp();
 	}
 }
