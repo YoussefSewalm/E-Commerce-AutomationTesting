@@ -16,18 +16,18 @@ public class CartPageTest extends TestBase{
 	AllProductsPage allproductspage;
 	ProductDetailsPage productdetailspage;
 	CartPage cartpage;
-    RegisterLoginPage registerloginpage;
-    RegisterPage registerpage;
+        RegisterLoginPage registerloginpage;
+        RegisterPage registerpage;
 	CheckOutPage checkoutpage;
 	PaymentPage paymentpage;
 	
 
-	@DataProvider(name="Payment After Reg_1")
-	public String [][] paymentafterreg_1() throws InvalidFormatException, IOException
-	{
-		ReadDataFromExcel ReadData_1=new ReadDataFromExcel();
-		return ReadData_1.ReadPaymentAfterRegData_1();
-	}
+    @DataProvider(name="Payment After Reg_1")
+    public String [][] paymentafterreg_1() throws InvalidFormatException, IOException
+   {
+	ReadDataFromExcel ReadData_1=new ReadDataFromExcel();
+	return ReadData_1.ReadPaymentAfterRegData_1();
+   }
     @Test(priority=1,dataProvider="Payment After Reg_1")
     public void PlaceOrderRegisterwhileCheckout(String initialname,String email,String regname,String pw,String day,String month,String year,String checknews,
 			String checkoffers,String firstname,String lastname,String company,String address1,String address2,
@@ -45,14 +45,14 @@ public class CartPageTest extends TestBase{
     	cartpage=productdetailspage.ClickingViewCart();
     	cartpage.ClickingProceedToCheckOut();
     	new WebDriverWait(driver,Duration.ofSeconds(15)).until(ExpectedConditions.textToBe(By.cssSelector("div[class=\"modal-header\"]>h4"), "Checkout"));
-		registerloginpage=cartpage.ClickingRegisterOrLoginFromCartPageAfterCheckOut();
+	registerloginpage=cartpage.ClickingRegisterOrLoginFromCartPageAfterCheckOut();
         registerloginpage.FillingInitialSignUpInfo(initialname, email);
-		registerpage=registerloginpage.ClickRegisterButton();
-	    registerpage.FillingRegisterInfo(regname, pw, day, month, year, checknews, checkoffers, firstname, lastname, company, address1, address2, country, state, city, zipcode, mobilenumber);
-		registerpage.ClickOnCreateAccount();
+	registerpage=registerloginpage.ClickRegisterButton();
+        registerpage.FillingRegisterInfo(regname, pw, day, month, year, checknews, checkoffers, firstname, lastname, company, address1, address2, country, state, city, zipcode, mobilenumber);
+	registerpage.ClickOnCreateAccount();
         registerpage.VerifyingAccountCreated();
-		registerpage.ClickingOnContiniueAfterCreatingAccount();
-		registerpage.VerifyingLoggedInAfterReg();
+	registerpage.ClickingOnContiniueAfterCreatingAccount();
+	registerpage.VerifyingLoggedInAfterReg();
     	cartpage=homepage.ClickingCartButton();
     	checkoutpage=cartpage.ClickingProceedToCheckOut();	
         checkoutpage.CheckingAdressDetails();
@@ -67,12 +67,12 @@ public class CartPageTest extends TestBase{
     	homepage.ClickingContinue();
     }
     
-	@DataProvider(name="Payment After Reg_2")
-	public String [][] paymentafterreg_2() throws InvalidFormatException, IOException
-	{
-		ReadDataFromExcel ReadData_1=new ReadDataFromExcel();
-		return ReadData_1.ReadPaymentAfterRegData_2();
-	}
+    @DataProvider(name="Payment After Reg_2")
+    public String [][] paymentafterreg_2() throws InvalidFormatException, IOException
+    {
+	ReadDataFromExcel ReadData_1=new ReadDataFromExcel();
+	return ReadData_1.ReadPaymentAfterRegData_2();
+    }
     @Test(priority=2,dataProvider="Payment After Reg_2")
     public void PlaceOrderRegisterBeforeCheckout(String initialname,String email,String regname,String pw,String day,String month,String year,String checknews,
 			String checkoffers,String firstname,String lastname,String company,String address1,String address2,
@@ -80,14 +80,14 @@ public class CartPageTest extends TestBase{
 			String cardnumber,String cvc,String expirymonth,String expiryyear
 			)
     {
-		homepage=new HomePage(driver);
-		registerloginpage=homepage.ClickingOnRegister();
+	homepage=new HomePage(driver);
+	registerloginpage=homepage.ClickingOnRegister();
         registerloginpage.FillingInitialSignUpInfo(initialname, email);
-		registerpage=registerloginpage.ClickRegisterButton();
-	    registerpage.FillingRegisterInfo(regname, pw, day, month, year, checknews, checkoffers, firstname, lastname, company, address1, address2, country, state, city, zipcode, mobilenumber);
-		registerpage.ClickOnCreateAccount();
+	registerpage=registerloginpage.ClickRegisterButton();
+	registerpage.FillingRegisterInfo(regname, pw, day, month, year, checknews, checkoffers, firstname, lastname, company, address1, address2, country, state, city, zipcode, mobilenumber);
+	registerpage.ClickOnCreateAccount();
         registerpage.VerifyingAccountCreated();
-		registerpage.ClickingOnContiniueAfterCreatingAccount();
+	registerpage.ClickingOnContiniueAfterCreatingAccount();
     	registerpage.VerifyingLoggedInAfterReg();
     	allproductspage=homepage.ClickingProducts();
     	productdetailspage=allproductspage.ClickingViewProduct();
@@ -107,21 +107,21 @@ public class CartPageTest extends TestBase{
     	homepage.DeleteAccount();
     	homepage.ClickingContinue();
     }
-	@DataProvider(name="Payment Already Loggedin")
-	public String [][] paymentalreadylogged() throws InvalidFormatException, IOException
-	{
-		ReadDataFromExcel ReadData_1=new ReadDataFromExcel();
-		return ReadData_1.ReadPaymentAlreadyLogin();
-	}
+   @DataProvider(name="Payment Already Loggedin")
+    public String [][] paymentalreadylogged() throws InvalidFormatException, IOException
+    {
+	ReadDataFromExcel ReadData_1=new ReadDataFromExcel();
+	return ReadData_1.ReadPaymentAlreadyLogin();
+    }
     @Test(priority=3,dataProvider="Payment Already Loggedin")
     public void PlaceOrderLoginBeforeCheckout(String loginemail,String pw,String cardname,
 			String cardnumber,String cvc,String expirymonth,String expiryyear)
 			
     {
-		homepage=new HomePage(driver);
-		registerloginpage=homepage.ClickingOnRegister();
-		registerloginpage.FillingLoginInfo(loginemail, pw);
-	    registerloginpage.ClickLoginButton();
+	homepage=new HomePage(driver);
+	registerloginpage=homepage.ClickingOnRegister();
+	registerloginpage.FillingLoginInfo(loginemail, pw);
+	registerloginpage.ClickLoginButton();
         registerloginpage.VerifyingSuccessfulLogin();
     	allproductspage=homepage.ClickingProducts();
     	productdetailspage=allproductspage.ClickingViewProduct();
@@ -142,12 +142,12 @@ public class CartPageTest extends TestBase{
     	homepage.ClickingHomePage();
     }
     
-	@DataProvider(name="Payment After Reg_3")
-	public String [][] paymentafterreg_3() throws InvalidFormatException, IOException
-	{
-		ReadDataFromExcel ReadData_1=new ReadDataFromExcel();
-		return ReadData_1.ReadPaymentAfterRegData_3();
-	}
+   @DataProvider(name="Payment After Reg_3")
+    public String [][] paymentafterreg_3() throws InvalidFormatException, IOException
+    {
+	ReadDataFromExcel ReadData_1=new ReadDataFromExcel();
+	return ReadData_1.ReadPaymentAfterRegData_3();
+    }
     @Test(priority=4,dataProvider="Payment After Reg_3")
     public void DownloadInvoiceAfterPurchase(String initialname,String email,String regname,String pw,String day,String month,String year,String checknews,
 			String checkoffers,String firstname,String lastname,String company,String address1,String address2,
@@ -165,14 +165,14 @@ public class CartPageTest extends TestBase{
     	cartpage=productdetailspage.ClickingViewCart();
     	cartpage.ClickingProceedToCheckOut();
     	new WebDriverWait(driver,Duration.ofSeconds(15)).until(ExpectedConditions.textToBe(By.cssSelector("div[class=\"modal-header\"]>h4"), "Checkout"));
-		registerloginpage=cartpage.ClickingRegisterOrLoginFromCartPageAfterCheckOut();
+	registerloginpage=cartpage.ClickingRegisterOrLoginFromCartPageAfterCheckOut();
         registerloginpage.FillingInitialSignUpInfo(initialname, email);
-		registerpage=registerloginpage.ClickRegisterButton();
-		registerpage.FillingRegisterInfo(regname, pw, day, month, year, checknews, checkoffers, firstname, lastname, company, address1, address2, country, state, city, zipcode, mobilenumber);
-		registerpage.ClickOnCreateAccount();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+	registerpage=registerloginpage.ClickRegisterButton();
+	registerpage.FillingRegisterInfo(regname, pw, day, month, year, checknews, checkoffers, firstname, lastname, company, address1, address2, country, state, city, zipcode, mobilenumber);
+	registerpage.ClickOnCreateAccount();
+	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         registerpage.VerifyingAccountCreated();
-		registerpage.ClickingOnContiniueAfterCreatingAccount();
+	registerpage.ClickingOnContiniueAfterCreatingAccount();
         registerpage.VerifyingLoggedInAfterReg();
     	cartpage=homepage.ClickingCartButton();
     	checkoutpage=cartpage.ClickingProceedToCheckOut();	
