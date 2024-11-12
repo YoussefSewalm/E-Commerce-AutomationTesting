@@ -13,8 +13,8 @@ public class HomePage extends Utility
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}
-	By RegisterLoginSelect=By.xpath("//a[@href=\"/login\"]");
-	By Logout=By.xpath("//a[@href=\"/logout\"]");
+    By RegisterLoginSelect=By.xpath("//a[@href=\"/login\"]");
+    By Logout=By.xpath("//a[@href=\"/logout\"]");
     By HomeButton_2=By.xpath("(//a[@href=\"/\"])[2]");
     By HomeButton_1=By.xpath("(//a[@href=\"/\"])[1]");
     By DeleteAccountButton=By.cssSelector("a[href*=\"/delete_account\"]");
@@ -25,18 +25,18 @@ public class HomePage extends Utility
     By EnterSubscriptionEmail=By.cssSelector("form[class=\"searchform\"]>input[id=\"susbscribe_email\"]");
     By SubscribeButton=By.id("subscribe");
     By CartButton=By.cssSelector("a[href=\"/view_cart\"]");
-	WebElement RegisterLoginSelectElement;
+    WebElement RegisterLoginSelectElement;
     WebElement LogOutElement;
     WebElement HomeButton_1_Element;
     WebElement HomeButton_2_Element;
     WebElement DeleteAccountButtonElement;
-	WebElement ContinueButtonElement;
-	WebElement ContactUsButtonElement;
-	WebElement TestCasesButtonElement;
-	WebElement ProductsPageButtonElement;
-	WebElement EnterSubscriptionEmailElement;
-	WebElement SubscribeButtonElement;
-	WebElement CartButtonElement;
+    WebElement ContinueButtonElement; 
+    WebElement ContactUsButtonElement;
+    WebElement TestCasesButtonElement;
+    WebElement ProductsPageButtonElement;
+    WebElement EnterSubscriptionEmailElement;
+    WebElement SubscribeButtonElement;
+    WebElement CartButtonElement;
 	public RegisterLoginPage ClickingOnRegister()
 	{
 		RegisterLoginSelectElement=driver.findElement(RegisterLoginSelect);
